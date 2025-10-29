@@ -1,0 +1,67 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>50</x><y>10</y><w>370</w><h>120</h></coordinates><panel_attributes>Fabricante
+--
+- nombre: String
+- direccion: String
+- antiguedad: int
+--
++ Fabricante(nombre: String, direccion: String, antiguedad: int)
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>220</y><w>590</w><h>180</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Producto
+--
+- nombre: String
+- precio: double
+- calorias: int
+- tiempoPreparacion: int
+- fabricante: Fabricante
+--
++ Producto(nombre: String, precio: double, calorias: int, tiempoPreparacion: int, fabricante: Fabricante)
++ calcularPrecioFinal(): double
++ getNombre(): String
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>0</y><w>800</w><h>120</h></coordinates><panel_attributes>Pizza
+--
+- sabor: SaborPizza
+- tamaño: TamañoPizza
+--
++ Pizza(nombre: String, precio: double, calorias: int, tiempoPreparacion: int, fabricante: Fabricante, sabor: SaborPizza, tamaño: TamañoPizza)
++ calcularPrecioFinal(): double
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>440</x><y>540</y><w>700</w><h>110</h></coordinates><panel_attributes>Postre
+--
+- tipoPostre: TipoPostre
+--
++ Postre(nombre: String, precio: double, calorias: int, tiempoPreparacion: int, fabricante: Fabricante, tipoPostre: TipoPostre)
++ calcularPrecioFinal(): double
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>10</x><y>500</y><w>250</w><h>170</h></coordinates><panel_attributes>Pizzeria
+--
+- nombre: String
+- capacidad: int
+- productos: Producto[]
+--
++ Pizzeria(nombre: String, capacidad: int)
++ agregarProducto(p: Producto): void
++ calcularTotalPizzas(): double
++ calcularTotalPostres(): double
++ calcularTotalGeneral(): double
++ toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>980</x><y>210</y><w>160</w><h>170</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt; 
+TipoPizza
+--
+NAPOLITANA
+MUZZARELLA
+CALABRESA</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1170</x><y>210</y><w>140</w><h>170</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TamanoPizza
+--
+CHICA
+MEDIANA
+GRANDE</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>450</x><y>720</y><w>140</w><h>160</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoPostre
+--
+FLAN
+TIRAMISU
+HELADO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>30</x><y>390</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>560</x><y>110</y><w>30</w><h>130</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;110;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>390</y><w>30</w><h>170</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;150</additional_attributes></element><element><id>UMLClass</id><coordinates><x>650</x><y>240</y><w>230</w><h>130</h></coordinates><panel_attributes>&lt;&lt;interface&gt;&gt;
+IVendible
+--
++ getPrecioTotal(): double</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>690</x><y>110</y><w>30</w><h>150</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;130;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>700</x><y>360</y><w>30</w><h>200</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;10;10;180</additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>120</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>40</x><y>750</y><w>170</w><h>190</h></coordinates><panel_attributes>&lt;&lt;enum&gt;&gt;
+TipoProducto
+--
+PIZZAS
+POSTRES
+TODOS</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>80</x><y>660</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1040</x><y>110</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>1180</x><y>110</y><w>30</w><h>120</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;100;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>500</x><y>640</y><w>30</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;80;10;10</additional_attributes></element></diagram>
